@@ -1,0 +1,293 @@
+<html><head><style>body {
+	font-family: Arial;
+	border-radius: 1.5em;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	min-height: 100%;
+}
+</style></head><body><!--
+<style>
+details { padding-top: 1em; padding-bottom:1em;}
+details summary {text-transform: uppercase; font-size: 0.8em; text-transform: uppercase; font-weight: bold; }
+</style
+-->
+<h1 id="session-01-practice-activity">Session 01: Practice Activity</h1>
+<p>You should now have read through the Session 1 activities. These cover the first two chapters in Crash Course in Python, and also how to work in the CodeSpaces web IDE.</p>
+<p>This exercise is set up to let you try out those skills: how to open your workspace; create a Python file; write code to store information and do calculations; and save your work to your GitHub repository.</p>
+<h2 id="forking-the-repository-launching-your-codespace">Forking the Repository &amp; Launching Your Codespace</h2>
+<p>Before you can start coding, you need to create your own copy of the course repository. This is called &quot;forking&quot;. Forking allows you to experiment and save your work without affecting the original project.</p>
+<ol>
+<li><p><strong>Go to the repository page that contains an empty workspace for you to use for the lecture activities:</strong> <a href="https://github.com/phil-lewis-exe/UoE-Python-Codespace">https://github.com/phil-lewis-exe/UoE-Python-Codespace</a></p>
+</li>
+<li><p><strong>Fork the Repository:</strong> In the top-right corner of the page, click the <strong>Fork</strong> button.</p>
+</li>
+<li><p><strong>Create Your Fork:</strong> You will be taken to the &quot;Create a new fork&quot; page.</p>
+<ul>
+<li>Make sure your own GitHub username is selected as the <strong>Owner</strong>.</li>
+<li>You can leave the <strong>Repository name</strong> and other settings as they are.</li>
+<li>Click the green <strong>Create fork</strong> button. GitHub will take a moment to create your personal copy.</li>
+</ul>
+</li>
+<li><p><strong>Launch Codespaces:</strong> Once your fork is created, you&#39;ll be on the main page for <em>your</em> copy of the repository.</p>
+<ul>
+<li>Click the green <strong>Code</strong> button.</li>
+<li>Select the <strong>Codespaces</strong> tab.</li>
+<li>Click <strong>Create codespace on main</strong> to launch your cloud-based VS Code editor. This might take a minute or two to build for the first time.</li>
+</ul>
+</li>
+</ol>
+<h2 id="navigating-your-workspace-in-the-terminal">Navigating Your Workspace in the Terminal</h2>
+<p>Your Codespace provides a ready-to-use development environment. The terminal is a powerful tool for navigating this environment and managing files.</p>
+<ol>
+<li><p><strong>Open the Integrated Terminal:</strong> Your Codespace should open with a terminal panel already at the bottom.</p>
+</li>
+<li><p><strong>Find Your Current Location:</strong> In Codespaces, the terminal starts with the working directory set to the main project folder. To verify this, type the <code>pwd</code> command into the terminal and press <code>Enter</code>. The <code>pwd</code> command stands for &#39;print working directory&#39;.</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">pwd</span>
+</code></pre>
+<p>You should see an output something like <code>/workspaces/UoE-Python-CodeSpace</code>.</p>
+</li>
+<li><p><strong>List the Directory Contents:</strong> To see what&#39;s in your current directory, use the <code>ls</code> command, which stands for &#39;list&#39;.</p>
+<pre><code class="lang-bash"><span class="hljs-attribute">ls</span>
+</code></pre>
+<p>You will see a list of files and directories, which should include the <code>WORKSPACE</code> directory.</p>
+</li>
+<li><p><strong>Change into the Workspace Directory:</strong> Now, let&#39;s move into the main <code>WORKSPACE</code> directory for your course. Use the <code>cd</code> command, which stands for &#39;change directory&#39;.</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> WORKSPACE
+</code></pre>
+</li>
+<li><p><strong>Navigate into the Session Folder:</strong> You can use the <code>ls</code> command to see the contents of this directory. It is suggested that you work for this exercise in the <code>Session01</code> folder. Type the <code>cd</code> command again to move into that directory.</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> Session01
+</code></pre>
+</li>
+<li><p><strong>Verify Your New Location:</strong> It&#39;s good practice to check you are where you think you are. Run the <code>pwd</code> command again.</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">pwd</span>
+</code></pre>
+<p>The output should now be <code>/workspaces/UoE-Python-CodeSpace/WORKSPACE/Session01</code>.</p>
+</li>
+<li><p><strong>Create Your Python File:</strong> You are now in the correct directory to create your file for this exercise. Use the <code>touch</code> command to create a new, empty Python file named <code>cinema_ex.py</code>.</p>
+<pre><code class="lang-bash">touch cinem<span class="hljs-built_in">a_ex</span>.py
+</code></pre>
+</li>
+<li><p><strong>Confirm File Creation:</strong> To be sure the file was created, use the <code>ls</code> command one more time.</p>
+<pre><code class="lang-bash"><span class="hljs-attribute">ls</span>
+</code></pre>
+<p>You should now see your new <code>cinema_ex.py</code> file listed in the terminal.</p>
+</li>
+</ol>
+<h2 id="opening-your-file-in-the-editor">Opening Your File in the Editor</h2>
+<p>Now that you&#39;ve created the file via the terminal, let&#39;s open it in the editor.</p>
+<ol>
+<li><p><strong>Use the Explorer:</strong> On the left-hand side of your VS Code window, you&#39;ll see the &quot;Explorer&quot; panel, which shows the complete file structure of your <code>UoE-Python-CodeSpace</code> project.</p>
+</li>
+<li><p><strong>Find Your File:</strong> If they&#39;re not already expanded, click the arrows next to the <code>WORKSPACE</code> directory and then the <code>Session01</code> directory to see their contents.</p>
+</li>
+<li><p><strong>Open the File:</strong> Click on <code>cinema_ex.py</code>. It will open in the main editor panel, ready for you to write code.</p>
+</li>
+</ol>
+<h2 id="writing-and-running-your-first-code">Writing and Running Your First Code</h2>
+<p>Let&#39;s write a line of code to make sure everything is working.</p>
+<ol>
+<li><p><strong>Write the Print Statement:</strong> In the editor panel for <code>cinema_ex.py</code>, type a <code>print()</code> function that displays the welcome message: &quot;Welcome to the University of Exeter cinema!&quot;.</p>
+<details>
+<summary>SHOW MODEL ANSWER</summary>
+
+   <code>python
+   print(&quot;Welcome to the University of Exeter cinema!&quot;)</code>
+
+</details>
+</li>
+<li><p><strong>Automatic Saving:</strong> In Codespaces, the editor saves all changes to your files as you make them. You don&#39;t need to manually save.</p>
+</li>
+<li><p><strong>Try out the <code>cat</code> command.</strong> In the linux terminal we can display the contents of a file using the <code>cat</code> command. Run the command below and you can see the code you wrote in the editor has been saved in the file.</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">cat</span> cinema_ex.<span class="hljs-keyword">py</span>
+</code></pre>
+</li>
+<li><p><strong>Run the File:</strong> Go back to your integrated terminal (which should still be in the <code>Session01</code> directory). To run your script, type <code>python</code> followed by the name of your file.</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">python</span> cinema_ex.<span class="hljs-keyword">py</span>
+</code></pre>
+</li>
+<li><p><strong>Check the Output:</strong> You should see your welcome message printed directly in the terminal.</p>
+<pre><code>Welcome <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> University <span class="hljs-keyword">of</span> Exeter cinema!
+</code></pre></li>
+</ol>
+<h2 id="using-variables-and-f-strings">Using Variables and F-Strings</h2>
+<p>Variables store information. F-strings let us easily format and display that information.</p>
+<ol>
+<li><p><strong>Add Variables and F-String:</strong> In your <code>cinema_ex.py</code> file, first define two variables. Set <code>weekday</code> to <code>&quot;Saturday&quot;</code> and <code>title</code> to <code>&quot;Ferris Bueller&#39;s Day Off&quot;</code>. Then, use a <code>print</code> function with an f-string to display their contents in a sentence.</p>
+<p><details></p>
+<summary>SHOW MODEL ANSWER</summary>
+
+
+</li>
+</ol>
+<pre><code>  ```python
+  # Film and day information
+  weekday = <span class="hljs-string">"Saturday"</span>
+  title = <span class="hljs-string">"Ferris Bueller's Day Off"</span>
+
+  # Use an f-string to display the variables
+  print(f<span class="hljs-string">"Today is {weekday}, and the film showing is {title}"</span>)
+  ```
+</code></pre><p>   </details></p>
+<ol>
+<li><p><strong>Run Again:</strong> Your file is saved automatically. Run it again from the terminal using the same command as before.</p>
+<details>
+<summary>SHOW MODEL ANSWER</summary>
+
+<code>bash
+python cinema_ex.py</code>
+You should now see the new message displaying the content of your variables.
+<code>Welcome to the University of Exeter cinema!
+Today is Saturday, and the film showing is Ferris Bueller&#39;s Day Off</code>
+
+</details>
+
+</li>
+</ol>
+<h2 id="calculating-attendance">Calculating Attendance</h2>
+<p>Now let&#39;s track ticket sales and see how many seats are left.</p>
+<ol>
+<li><p><strong>Add Attendance Variables:</strong> In your script, add the variables <code>capacity</code>, <code>n_adult</code>, <code>n_child</code>, and <code>n_student</code>. These should store the cinema&#39;s capacity, which is 200, and the current number of tickets sold: 12 adult tickets, 0 child tickets, and 97 student tickets.</p>
+<p><details></p>
+<summary>SHOW MODEL ANSWER</summary>
+
+
+</li>
+</ol>
+<pre><code class="lang-python">   <span class="hljs-comment"># Attendance information</span>
+   <span class="hljs-attr">capacity</span> = <span class="hljs-number">200</span>
+   <span class="hljs-attr">n_adult</span> = <span class="hljs-number">12</span>
+   <span class="hljs-attr">n_child</span> = <span class="hljs-number">0</span>
+   <span class="hljs-attr">n_student</span> = <span class="hljs-number">97</span>
+</code></pre>
+<p>   </details></p>
+<ol>
+<li><p><strong>Calculate and Display Totals:</strong> Next, add code to calculate the <code>total_tickets_sold</code> by adding the three ticket types together. Then, calculate the <code>seats_remaining</code>. Finally, print both of these results using f-strings.</p>
+   <details>
+   <summary>SHOW MODEL ANSWER</summary>
+
+   <code>python
+   total_tickets_sold = n_adult + n_child + n_student
+   seats_remaining = capacity - total_tickets_sold
+
+   print(f&quot;Total tickets sold: {total_tickets_sold}&quot;)
+   print(f&quot;Seats remaining: {seats_remaining}&quot;)</code>
+
+   </details>
+</li>
+<li><p><strong>Run and Check:</strong> Run the file again from the terminal to see your new calculations.</p>
+<pre><code>Total tickets <span class="hljs-string">sold:</span> <span class="hljs-number">109</span>
+Seats <span class="hljs-string">remaining:</span> <span class="hljs-number">91</span>
+</code></pre></li>
+</ol>
+<h2 id="calculating-takings">Calculating Takings</h2>
+<p>Finally, let&#39;s calculate the total cash taken from ticket sales.</p>
+<ol>
+<li><p><strong>Add Price Variables:</strong> First, add the variables <code>price_adult</code>, <code>price_child</code>, and <code>price_student</code> to your script. These should store the price for each ticket type: 9.99 for an adult ticket, 4.99 for a child ticket, and 5.99 for a student ticket.</p>
+<p><details></p>
+<summary>SHOW MODEL ANSWER</summary>
+
+
+</li>
+</ol>
+<pre><code>  ```python
+  # Ticket price information
+  price_adult = <span class="hljs-number">9.99</span>
+  price_child = <span class="hljs-number">4.99</span>
+  price_student = <span class="hljs-number">5.99</span>
+  ```
+</code></pre><p>   </details></p>
+<ol>
+<li><p><strong>Calculate Total Cash:</strong> Now, create a <code>cash_taken</code> variable. To calculate its value, multiply each ticket count variable by its corresponding price variable, and add the results together. Finally, print the result in a user-friendly message, formatting it to two decimal places.</p>
+<p><em>Note: You can use <code>:.2f</code> inside the f-string so it formats the number to two decimal places, which is useful for currency e.g. will show £10.80 and not £10.8</em></p>
+<details>
+<summary>SHOW MODEL ANSWER</summary>
+
+<code>python
+cash_taken = (n_adult * price_adult) + (n_child * price_child) + (n_student * price_student)
+
+print(f&quot;Cash taken: £{cash_taken:.2f}&quot;)</code>
+
+</details>
+
+
+
+</li>
+</ol>
+<ol>
+<li><strong>Run and Check:</strong> Run the file one last time.
+Your final output should look like this:<pre><code>Welcome <span class="hljs-keyword">to</span> the University <span class="hljs-keyword">of</span> Exeter cinema!
+Today <span class="hljs-keyword">is</span> Saturday, <span class="hljs-keyword">and</span> the film showing <span class="hljs-keyword">is</span> Ferris Bueller<span class="hljs-comment">'s Day Off</span>
+Total tickets sold: <span class="hljs-number">109</span>
+Seats remaining: <span class="hljs-number">91</span>
+Cash taken: £<span class="hljs-number">700.91</span>
+</code></pre></li>
+</ol>
+<p>You have successfully navigated your workspace, written a Python script that uses variables, and performed calculations. Great work!</p>
+<h2 id="committing-your-changes-to-github-via-the-terminal">Committing Your Changes to GitHub via the Terminal</h2>
+<p>The final step is to save your work back to your forked repository on GitHub. We will do this using <code>git</code> commands in the terminal. This process is called &quot;committing&quot; and &quot;pushing&quot;. As shown in the CodeSpaces video tutorial you can save files to GitHub using the toolbar, but it is often useful to be able to do this using terminal commands.</p>
+<ol>
+<li><p><strong>Check the Status:</strong> First, let&#39;s see what changes Git has tracked. In your terminal, type the <code>git status</code> command.</p>
+<pre><code class="lang-bash"><span class="hljs-attribute">git status</span>
+</code></pre>
+<p>This will show you that <code>cinema_ex.py</code> has been &quot;modified&quot; or is an &quot;untracked file&quot;.</p>
+</li>
+<li><p><strong>Stage Your Changes:</strong> Before you can commit a file, you need to add it to the &quot;staging area&quot;. This tells Git exactly which changes you want to include in the next snapshot.</p>
+<ul>
+<li>To add one specific file, you would use: <code>git add cinema_ex.py</code></li>
+<li>If you have changed multiple files and want to stage them all, it&#39;s more efficient to use a period (<code>.</code>), which means &quot;all files in the current directory and subdirectories&quot;.<pre><code class="lang-bash">git <span class="hljs-keyword">add</span><span class="bash"> .</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>Commit the Changes:</strong> Now, take a snapshot of the staged changes. This is called a commit. It&#39;s important to include a descriptive message about the work you did using the <code>-m</code> flag.</p>
+<pre><code class="lang-bash"><span class="hljs-attribute">git</span> commit -m <span class="hljs-string">"Complete Session 1 cinema exercise"</span>
+</code></pre>
+<p>Git will confirm that the commit has been made.</p>
+</li>
+<li><p><strong>Push to GitHub:</strong> The commit is saved locally in your Codespace. The final step is to &quot;push&quot; it up to your personal forked repository on GitHub.com.</p>
+<pre><code class="lang-bash">git <span class="hljs-keyword">push</span>
+</code></pre>
+<p>You can now go to your forked repository on the GitHub website, navigate to the <code>WORKSPACE/Session01</code> folder, and you will see your <code>cinema_ex.py</code> file saved there with your commit message.</p>
+</li>
+</ol>
+<h2 id="-appendix-windows-terminal-commands-"><strong>Appendix: Windows Terminal Commands</strong></h2>
+<p>CodeSpaces is based on the VS Code IDE application. If working in the terminal in VS Code on a Windows laptop, the system commands are different:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Linux Command</strong></th>
+<th style="text-align:left"><strong>Windows PowerShell Command</strong></th>
+<th style="text-align:left"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>pwd</code></td>
+<td style="text-align:left"><code>gl</code></td>
+<td style="text-align:left"><strong>Prints the current working directory.</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ls</code></td>
+<td style="text-align:left"><code>dir</code></td>
+<td style="text-align:left"><strong>Lists the contents of the directory.</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>touch file.py</code></td>
+<td style="text-align:left"><code>New-Item file.py</code></td>
+<td style="text-align:left"><strong>Creates a new, empty file.</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>cat file.py</code></td>
+<td style="text-align:left"><code>type file.py</code></td>
+<td style="text-align:left"><strong>Displays the contents of a file.</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>cd</code></td>
+<td style="text-align:left"><code>cd</code></td>
+<td style="text-align:left"><strong>Change directory (this one is the same!).</strong></td>
+</tr>
+</tbody>
+</table>
+</body></html>
